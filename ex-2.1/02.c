@@ -2,7 +2,7 @@
 
 //Faça um programa que leia dois valores e exiba o maior valor lido.
 
-int main()
+int main(void)
 {
     int valor1, valor2;
 
