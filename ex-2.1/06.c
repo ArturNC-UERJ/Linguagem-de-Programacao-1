@@ -3,7 +3,7 @@
 
 //Calcular o somatório desejado
 
-int main()
+int main(void)
 {
     int N, somatorio = 0, i;
     printf("Insira o limite do somatorio: ");
