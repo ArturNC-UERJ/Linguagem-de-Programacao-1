@@ -1,19 +1,6 @@
 #include <stdio.h>
-int eh_primo(int n)
-{
-    int i , contador = 0;
-    for ( i = 1 ; i <= n ; i++ )
-    {
-        if ( n % i == 0 )
-        {
-            contador += 1;
-        }
-    }
-    if (contador == 2)
-    {
-        return 1;
-    }
-}
+
+int eh_primo(n);
 
 int main(void)
 {
@@ -23,11 +10,27 @@ int main(void)
     int resultado = eh_primo(n);
     if (resultado == 1)
     {
-        printf("O numero eh primo!");
+        printf("NUMERO PRIMO!");
     }
     else
     {
-        printf("O numero nao eh primo!");
+        printf("NUMERO NAO PRIMO!");
     }
     return 0;
+}
+
+int eh_primo(n)
+{
+    int i , contador = 0;
+    for ( i = 1 ; i <= n ; i++ )
+    {
+        if ( n % i == 0 )
+        {
+            contador += 1;
+        }
+    }
+    if (contador <= 2)
+    {
+        return 1;
+    }
 }
