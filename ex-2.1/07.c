@@ -1,3 +1,4 @@
+//OBS: o programa foi executado com 6 times no print do exercicio para facilitar
 #include <string.h>
 #include <stdio.h>
 
