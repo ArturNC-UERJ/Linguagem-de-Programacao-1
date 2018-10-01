@@ -9,7 +9,7 @@ int main(void)
 
     printf("Insira o valor em dolares: ");
     scanf("%f", &dolar);
-    real = dolar * 3.71;
+    real = dolar * 3.17;
     if (real <= 1000)
     {
         printf("\nBom negocio\n");
