@@ -1,23 +1,18 @@
 #include <stdio.h>
 
-int strlen(char* str);
-
-int main(void)
-{
-    char str[30];
-    printf("Insira sua string: ");
-    gets(str);
-    printf("A string tem %d elementos", strlen(str));
-    return 0;
-}
-
-int strlen(char* str)
-{
+int minha_strlen(char* str){
     int i = 0, tamanho = 0;
-    while (str[i] != '\0')
-    {
+    while (str[i] != '\0'){
         tamanho++;
         i++;
     }
     return tamanho;
+}
+
+int main(void){
+    char txt[50];
+    printf("Insira sua string: ");
+    gets(txt);
+    printf("A string tem %d elementos", minha_strlen(txt));
+    return 0;
 }
