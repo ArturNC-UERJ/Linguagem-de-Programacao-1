@@ -6,16 +6,18 @@ struct Ponto{
     int y;
 };
 
-void preenche(int i, struct Ponto* vec){
-    printf("Insira a Abscissa do elemento %d: ", i+1);
-    scanf("%d", &(vec[i]).x);
-    printf("Insira a Ordenada do elemento %d: ", i+1);
-    scanf("%d", &(vec[i]).y);
+void preenche(struct Ponto* ponto){
+    printf("Insira a Abscissa: ");
+    scanf("%d", &(*ponto).x);
+    printf("Insira a Ordenada: ");
+    scanf("%d", &(*ponto).y);
 }
 
 void preenche_vetor(struct Ponto* vec){
     for(int i = 0; i < 10; i++){
-        preenche(i, vec);
+        printf("===== Ponto %d =====\n", i+1);
+        preenche(&vec[i]);
+        printf("\n");
     }
 }
 
