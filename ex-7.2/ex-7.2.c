@@ -1,40 +1,45 @@
 #include <stdio.h>
 
-struct Pais {
-	char nome[30];
-	int populacao;
-	float PIB;
+struct Jogador{
+    char nome[10];
+	int numero;
+	char pos[15];
 };
 
-struct Continente {
-	char nome[10];
-	float area;
-	int populacao_total;
-	struct Pais pais;
+struct Time{
+	char nome[20];
+    struct Jogador jogadores[11];
+    int pontos;
 };
 
-void preenche(struct Pais* pais){
-	printf("Digite o nome do pais: ");
-	scanf("%s", (*pais).nome);
-	printf("Digite a populacao do pais: ");
-	scanf("%d", &(*pais).populacao);
-	printf("Digite o PIB do pais: ");
-	scanf("%f", &(*pais).PIB);
+void preenche(struct Jogador* jogador){
+	printf("Digite o nome do jogador: ");
+	scanf("%s", (*jogador).nome);
+	printf("Digite a posicao do jogador: ");
+	scanf("%s", (*jogador).pos);
+	printf("Digite o numero do jogador: ");
+	scanf("%d", &(*jogador).numero);
 }
 
-void preenche2(struct Continente* c1){
-	printf("Digite o nome do continente: ");
-	scanf("%s", (*c1).nome);
-	printf("Digite a populacao total do continente: ");
-	scanf("%d", &(*c1).populacao_total);
-	printf("Digite a area do continente: ");
-	scanf("%f", &(*c1).area);
-	preenche(&(*c1).pais);
+void preenche2(struct Time* time){
+	printf("Digite o nome do time: ");
+	scanf("%s", (*time).nome);
+	printf("Digite a pontuacao do time: ");
+	scanf("%d", &(*time).pontos);
+	printf("\n====== Membros do time ======\n\n");
+	for (int i = 0; i < 11; i++){
+        preenche(&(*time).jogadores[i]);
+        printf("\n");
+	}
 }
 
 int main(void){
-	struct Continente c1;
-	preenche2(&c1);
-	printf("Continente: %s\nArea: %.1f Km2\nPopulacao Absoluta: %d habitantes\nPais: %s\nPopulacao: %d habitantes\nPIB: $%.2f\n", c1.nome, c1.area, c1.populacao_total, c1.pais.nome, c1.pais.populacao, c1.pais.PIB);
+    struct Time time;
+    preenche2(&time);
+    printf("\nO time %s possui %d pontos\n\n", time.nome, time.pontos);
+    printf("Integrantes do time: \n");
+    for (int i = 0; i < 11; i++){
+        printf("Nome: %s --- Posicao: %s --- Numero: %d\n", time.jogadores[i].nome, time.jogadores[i].pos, time.jogadores[i].numero);
+    }
 	return 0;
 }
