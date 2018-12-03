@@ -1,8 +1,8 @@
 #include <stdio.h>
 
 struct Posicao{
-    int x;
-    int y;
+	int x;
+	int y;
 };
 
 struct Personagem {
