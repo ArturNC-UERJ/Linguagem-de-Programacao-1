@@ -51,6 +51,6 @@ int main(void){
         le_personagem(&personagem[i]);
         printf("\n");
     }
-    mapa(&personagem);
+    mapa(personagem);
 	return 0;
 }
