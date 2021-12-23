@@ -1,3 +1,3 @@
 Artur Nascimento do Carmo
 ===
-*4° Período de Ciência da Computação pela Universidade do Estado do Rio de Janeiro*
+*Respositório destinado aos exercicios da disciplina "Linguagem de Programação 1 (LP1)" exercicios esses feitos utilizando a linguagem de programação C*
